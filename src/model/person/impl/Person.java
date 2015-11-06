@@ -1,4 +1,8 @@
-package model.person;
+package model.person.impl;
+
+import model.person.IAddress;
+import model.person.IFullName;
+import model.person.IPerson;
 
 /**
  * Created by Dariya on 05.11.2015.
