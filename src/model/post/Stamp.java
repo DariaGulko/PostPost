@@ -1,13 +1,13 @@
 package model.post;
 
-import model.person.IAddress;
+import model.person.Address;
 
 import java.util.Date;
 
 /**
  * Created by Dariya on 04.11.2015.
  */
-public interface IStamp {
-    public IAddress getPostOfficeAddress();
+public interface Stamp {
+    public Address getPostOfficeAddress();
     public Date getStampDate();
 }

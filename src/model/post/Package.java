@@ -1,16 +1,32 @@
 package model.post;
 
-import model.person.IAddress;
+import model.person.Address;
+import model.person.FullName;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
+
+
 
 /**
  * Created by Dariya on 04.11.2015.
  */
-public interface IPackage {
-    public IAddress getPostOfficeAddress();
-    public Date getStampDate();
+public interface Package {
+
+    public String getPackageId();
+    public int getWeight();
+    public Type getType();
+    public Address getReceiverAddress();
+    public Address getSenderAddress();
+    public FullName getSenderFullName();
+    public FullName getReceiverFullName();
+    public List<Stamp> getStamps();
+
+    /**
+     * http://www.ups.com/worldshiphe
+     * lp/WS15/RUS/AppHelp/Codes/Package_Type_Codes.htm
+     */
     public static enum Type {
         T_CP("Место груза"), T_30("Палета", 50), T_10("Коробка UPS 10 кг", 10),
         T_25("Коробка UPS 25 кг", 25), T_27("Средняя коробка UPS Express");

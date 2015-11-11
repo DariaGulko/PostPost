@@ -1,14 +1,14 @@
 package model.transport;
 
-import model.post.IPostOffice;
+import model.post.PostOffice;
 
 /**
  * Created by Dariya on 04.11.2015.
  */
-public interface IDeliveryTransport {
+public interface DeliveryTransport {
     public Type getType();
-    public IPostOffice getStartPostOffice();
-    public IPostOffice getDestinationPostOffice();
+    public PostOffice getStartPostOffice();
+    public PostOffice getDestinationPostOffice();
 
     public static enum Type {
         SEA(10, 2.5), AIR(50, 25.2), LAND(18, 1.26);

@@ -6,18 +6,18 @@ import java.util.Map;
 /**
  * Created by Dariya on 04.11.2015.
  */
-public interface IStorage {
+public class Storage {
     private Map storage;
 
     private static class InstanceHolder {
-        private static final IStorage instance = new IStorage();
+        private static final Storage instance = new Storage();
     }
 
-    public static IStorage getInstance() {
+    public static Storage getInstance() {
         return InstanceHolder.instance;
     }
 
-    private IStorage() {
+    private Storage() {
         this.storage = new HashMap<>();
     }
 

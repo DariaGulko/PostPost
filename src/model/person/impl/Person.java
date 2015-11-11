@@ -1,13 +1,12 @@
 package model.person.impl;
 
-import model.person.IAddress;
-import model.person.IFullName;
-import model.person.IPerson;
+import model.person.Address;
+import model.person.FullName;
 
 /**
  * Created by Dariya on 05.11.2015.
  */
-public class Person implements IPerson {
+public class Person implements model.person.Person {
     private FullNameData nameData;
     private AddressData addressData;
 
@@ -17,16 +16,16 @@ public class Person implements IPerson {
     }
 
     @Override
-    public IAddress getAddress() {
+    public Address getAddress() {
         return addressData;
     }
 
     @Override
-    public IFullName getFullName() {
+    public FullName getFullName() {
         return nameData;
     }
 
-    private class FullNameData implements IFullName {
+    private class FullNameData implements FullName {
         private String FirstName;
         private String LastName;
         private String MiddleName;
@@ -53,7 +52,7 @@ public class Person implements IPerson {
         }
     }
 
-    private class AddressData implements IAddress {
+    private class AddressData implements Address {
         private String country;
         private String city;
         private String street;
