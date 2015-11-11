@@ -28,9 +28,14 @@ public class PostOffice implements model.post.PostOffice {
 
     @Override
     public Package.Type getAcceptableTypes() {
-        return model.post.Package.Type type;
+        return null;
     }
 
+    /*@Override
+    public Package.Type getAcceptableTypes() {
+        return model.post.Package.Type type;
+    }
+*/
     @Override
     public int getMaxWeight() {
         return 0;
