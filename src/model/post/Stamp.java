@@ -10,4 +10,5 @@ import java.util.Date;
 public interface Stamp {
     public Address getPostOfficeAddress();
     public Date getStampDate();
+
 }

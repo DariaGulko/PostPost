@@ -23,25 +23,16 @@ public class Package implements model.post.Package {
     private model.post.Package.Type type;
     private List<Stamp> stamps;
 
-
-    public Package(int weight,
-                   Address receiverAddress,
-                   Address senderAddress,
-                   FullName senderFullname,
-                   FullName receiverFullname,
-                   model.post.Package.Type type) {
+    public Package(int weight, Address receiverAddress, Address senderAddress, int packageId, FullName senderFullname, FullName receiverFullname, Type type, List<Stamp> stamps) {
         this.weight = weight;
         ReceiverAddress = receiverAddress;
         SenderAddress = senderAddress;
-        this.packageId = generateID();
+        this.packageId = packageId;
         this.senderFullname = senderFullname;
         this.receiverFullname = receiverFullname;
         this.type = type;
+        this.stamps = stamps;
     }
-
-
-
-
 
     private int generateID(){
         Random random = new Random();

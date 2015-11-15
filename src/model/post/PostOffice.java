@@ -7,7 +7,7 @@ import java.awt.*;
  */
 public interface PostOffice {
     public Stamp getStamp();
-    public Address getAddress();
+    public String getAddress();
     public Package.Type getAcceptableTypes();//*
     public int getMaxWeight();//*
     public boolean sendPackage(Package parcel);
